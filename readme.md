@@ -1,6 +1,6 @@
 # is-file-stream [![Build Status](https://travis-ci.org/jamestalmage/is-file-stream.svg?branch=master)](https://travis-ci.org/jamestalmage/is-file-stream)
 
-> Detect if a Stream is a file stream
+> Detect if a stream is a file stream
 
 
 ## Install
@@ -34,41 +34,27 @@ isFileStream.readable(writableFileStream);
 
 ### isFileStream(input)
 
-Returns `true` if `input` is a file system stream, otherwise returns `false`;
+Returns `true` if `input` is a file system stream, otherwise returns `false`.
 
 ### isFileStream.readable(input)
 
-Returns `true` if `input` is a readable file system stream, otherwise returns `false`;
+Returns `true` if `input` is a readable file system stream, otherwise returns `false`.
 
 ### isFileStream.writable(input)
 
-Returns `true` if `input` is a writable file system stream, otherwise returns `false`;
+Returns `true` if `input` is a writable file system stream, otherwise returns `false`.
 
 ### isFileStream.open(input)
 
-Returns `true` if `input` is a file system stream that is already open, otherwise returns `false`;
+Returns `true` if `input` is a file system stream that is already open, otherwise returns `false`.
 
 ### isFileStream.open.readable(input)
 
-Returns `true` if `input` is a readable file system stream that is already open, otherwise returns `false`;
+Returns `true` if `input` is a readable file system stream that is already open, otherwise returns `false`.
 
 ### isFileStream.open.writable(input)
 
-Returns `true` if `input` is a writable file system stream that is already open, otherwise returns `false`;
-
-### isFileStream.isOpen(input)
-
-Checks if a `input.fd` is a number (returning true if it is). This indicates the file system stream is already open. This bypasses checking whether the stream is actually a file system stream, so it should only be used if you have already verified that with one of the above checks:
-
-```js
-if (isFileStream(stream)) {
-  if (isFileStream.isOpen(stream)) {
-    // do something
-  } else {
-    // do something else
-  }
-}
-```
+Returns `true` if `input` is a writable file system stream that is already open, otherwise returns `false`.
 
 ## License
 

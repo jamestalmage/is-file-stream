@@ -1,12 +1,11 @@
 'use strict';
 const isStream = require('is-stream');
-const isBuffer = require('is-buffer');
 
 function commonCheck(stream) {
 	return (stream.fd !== undefined) &&
 		(stream.flags !== undefined) &&
 		(stream.mode !== undefined) &&
-		((typeof stream.path === 'string') || isBuffer(stream.path));
+		((typeof stream.path === 'string') || Buffer.isBuffer(stream.path));
 }
 
 function isReadable(stream) {
@@ -27,13 +26,10 @@ function isOpen(stream) {
 
 // wrap previous assertion with an isOpen check
 function wrap(fn) {
-	return function (stream) {
-		return fn(stream) && isOpen(stream);
-	};
+	return stream => fn(stream) && isOpen(stream);
 }
 
 module.exports = isFsStream;
-module.exports.isOpen = isOpen;
 module.exports.readable = isReadable;
 module.exports.writable = isWritable;
 
