@@ -1,6 +1,6 @@
 {
   "name": "is-file-stream",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Detect if a stream is a file stream",
   "license": "MIT",
   "repository": "jamestalmage/is-file-stream",
