@@ -24,7 +24,7 @@ function isOpen(stream) {
 	return stream && (typeof stream.fd === 'number');
 }
 
-// wrap previous assertion with an isOpen check
+// Wrap previous assertion with an isOpen check
 function wrap(fn) {
 	return stream => fn(stream) && isOpen(stream);
 }

@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save is-file-stream
+$ npm install is-file-stream
 ```
 
 
@@ -17,7 +17,7 @@ const fs = require('fs');
 const isFileStream = require('is-file-stream');
 
 const readableFileStream = fs.createReadStream(somePath);
-const writableFileStream = fs.createReadStream(someOtherPath);
+const writableFileStream = fs.createWriteStream(someOtherPath);
 
 isFileStream(readableFileStream);
 // true
@@ -58,4 +58,4 @@ Returns `true` if `input` is a writable file system stream that is already open,
 
 ## License
 
-MIT © [James Talmage](http://github.com/jamestalmage)
+MIT © [James Talmage](https://github.com/jamestalmage)
