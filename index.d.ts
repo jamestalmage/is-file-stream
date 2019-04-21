@@ -16,7 +16,7 @@ declare namespace isFileStream {
 
 declare const isFileStream: {
 	/**
-	@returns Whether`input` is a file system stream.
+	@returns Whether `input` is a file system stream.
 
 	@example
 	```
@@ -36,7 +36,7 @@ declare const isFileStream: {
 	(input: unknown): input is isFileStream.ReadStream | isFileStream.WriteStream;
 
 	/**
-	@returns Whether`input` is a readable file system stream.
+	@returns Whether `input` is a readable file system stream.
 
 	@example
 	```
@@ -52,7 +52,7 @@ declare const isFileStream: {
 	readable(input: unknown): input is isFileStream.ReadStream;
 
 	/**
-	@returns Whether`input` is a writable file system stream.
+	@returns Whether `input` is a writable file system stream.
 
 	@example
 	```
